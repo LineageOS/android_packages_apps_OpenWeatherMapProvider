@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_f37cd2b6",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-21T17:33:20Z",
+      "side": 1,
+      "message": "Will change it",
+      "parentUuid": "5faad753_f3a7f24e",
+      "range": {
+        "startLine": 18,
+        "startChar": 19,
+        "endLine": 18,
+        "endChar": 22
+      },
+      "revId": "88e3bd09fc6937ea4a79b834e55416016acf432c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_f38e12cf",
         "filename": "AndroidManifest.xml",
         "patchSetId": 1
@@ -107,6 +131,30 @@
       "side": 1,
       "message": "Hmm. Sample provider has location permissions declared in manifest.",
       "parentUuid": "5faad753_73bc6269",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "88e3bd09fc6937ea4a79b834e55416016acf432c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_13764eda",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-21T17:33:20Z",
+      "side": 1,
+      "message": "It does, because the sample app also includes a test activity that queries the device location and requests a weather update using the resolved location by calling the weather API (which is what cLock is doing)",
+      "parentUuid": "5faad753_93623e16",
       "range": {
         "startLine": 21,
         "startChar": 4,
