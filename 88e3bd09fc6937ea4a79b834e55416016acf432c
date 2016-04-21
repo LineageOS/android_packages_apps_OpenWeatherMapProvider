@@ -45,6 +45,30 @@
       "revId": "88e3bd09fc6937ea4a79b834e55416016acf432c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_73bc6269",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-21T17:25:24Z",
+      "side": 1,
+      "message": "No, we don\u0027t. The provider receives a Location object, but it does not query the location so there\u0027s no need to hold that permission.",
+      "parentUuid": "5faad753_93bd5e6a",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "88e3bd09fc6937ea4a79b834e55416016acf432c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
