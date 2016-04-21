@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_d61bc470",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2016-04-21T18:39:38Z",
+      "side": 1,
+      "message": "tabs",
+      "range": {
+        "startLine": 270,
+        "startChar": 0,
+        "endLine": 294,
+        "endChar": 46
+      },
+      "revId": "1d667d277bda4703ad3b9de42d6bf8ff3e4404b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_f6184076",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2016-04-21T18:39:38Z",
+      "side": 1,
+      "message": "would be nice if these were all constants, but that might be overkill as this is legacy code (mostly)",
+      "range": {
+        "startLine": 298,
+        "startChar": 21,
+        "endLine": 298,
+        "endChar": 24
+      },
+      "revId": "1d667d277bda4703ad3b9de42d6bf8ff3e4404b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
