@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_10c2b734",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2016-04-26T20:10:19Z",
+      "side": 1,
+      "message": "heads up, since this is play store bound, please add\n\n \u003cuses-feature android:name\u003d\"org.cyanogenmod.weather\" android:required\u003d\"true\" /\u003e",
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
