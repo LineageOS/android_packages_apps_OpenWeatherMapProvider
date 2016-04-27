@@ -16,6 +16,109 @@
       "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_2bf9827f",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/HttpRetriever.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T07:30:48Z",
+      "side": 1,
+      "message": "Neither check for http status nor null checks, and without close the buffer at any point.\n\nIf you got a \u003c\u003e 200 status code, buffer will be a different thing than a json or maybe null. The json error is cached in the provider, but the NPE is not cached anywhere though.",
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_4bf63e92",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T07:30:48Z",
+      "side": 1,
+      "message": "Do you really need an application context to just access to shared preferences and get a resource strings? IHMO, the service context should be just enough",
+      "range": {
+        "startLine": 83,
+        "startChar": 19,
+        "endLine": 83,
+        "endChar": 40
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_ebf28a9a",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T07:30:48Z",
+      "side": 1,
+      "message": "forecastResponse",
+      "range": {
+        "startLine": 168,
+        "startChar": 16,
+        "endLine": 168,
+        "endChar": 27
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_cb2f8ef4",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T07:30:48Z",
+      "side": 1,
+      "message": "Do you considered glitches from the backend? For example if you can obtain conditions, but not forescast, the whole data is discarded. And below things are discarded just because one data is not present. Not sure if the cm weather provider needs the whole data, but I guess this could be more smart and return only the retrieved data.",
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_2b3e6229",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 551,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-27T07:30:48Z",
+      "side": 1,
+      "message": "Is shouldn\u0027t enough witht a Locale#getLanguage() and lower case?",
+      "range": {
+        "startLine": 551,
+        "startChar": 8,
+        "endLine": 551,
+        "endChar": 14
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
