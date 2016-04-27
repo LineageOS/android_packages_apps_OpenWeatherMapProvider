@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_86042d7d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2016-04-27T16:05:49Z",
+      "side": 1,
+      "message": "app",
+      "range": {
+        "startLine": 31,
+        "startChar": 81,
+        "endLine": 31,
+        "endChar": 92
+      },
+      "revId": "6505a2f5b20bd1f7960a5bf3cf941468508df995",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
