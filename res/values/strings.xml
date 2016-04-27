@@ -28,6 +28,6 @@
 
     <!-- Copyright and disclaimers -->
     <string name="prefscreen_copyright_title">Disclaimer</string>
-    <string name="prefscreen_copyright_summary">The information provided by this application is provided for general information purposes only and does not claim to be or constitute legal or other professional advice and shall not be relied upon %1$s nor the provider of this application as such.</string>
+    <string name="prefscreen_copyright_summary">The information provided by this application is provided for general information purposes only</string>
     <string name="openweathermap_inc_name" translatable="false">OpenWeatherMap, Inc.</string>
 </resources>

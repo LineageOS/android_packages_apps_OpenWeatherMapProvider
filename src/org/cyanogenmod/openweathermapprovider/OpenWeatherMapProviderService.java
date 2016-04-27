@@ -196,11 +196,23 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
                 WeatherInfo.Builder weatherInfo = new WeatherInfo.Builder(
                         cityName, sanitizeTemperature(main.getDouble("temp"), true),
                                 WeatherContract.WeatherColumns.TempUnit.CELSIUS);
-                weatherInfo.setHumidity(main.getDouble("humidity"));
-                weatherInfo.setWind(wind.getDouble("speed"), wind.getDouble("deg"),
-                        WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
-                weatherInfo.setTodaysLow(sanitizeTemperature(main.getDouble("temp_min"), true));
-                weatherInfo.setTodaysLow(sanitizeTemperature(main.getDouble("temp_max"), true));
+
+                // OpenWeatherMap will include only the weather data available to them at the time
+                // of the request, so we need to add guards to prevent JSONExceptions
+
+                if (main.has("humidity")) {
+                    weatherInfo.setHumidity(main.getDouble("humidity"));
+                }
+                if (wind.has("speed") && wind.has("deg")) {
+                    weatherInfo.setWind(wind.getDouble("speed"), wind.getDouble("deg"),
+                            WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
+                }
+                if (main.has("temp_min")) {
+                    weatherInfo.setTodaysLow(sanitizeTemperature(main.getDouble("temp_min"), true));
+                }
+                if (main.has("temp_max")) {
+                    weatherInfo.setTodaysLow(sanitizeTemperature(main.getDouble("temp_max"), true));
+                }
                 //NOTE: The timestamp provided by OpenWeatherMap corresponds to the time the data
                 //was last updated by the stations. Let's use System.currentTimeMillis instead
                 weatherInfo.setTimestamp(System.currentTimeMillis());
@@ -232,17 +244,31 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
             int count = forecasts.length();
 
             if (count == 0) {
-                throw new JSONException("Empty forecasts array");
+                //Return empty list
+                return result;
             }
             for (int i = 0; i < count; i++) {
                 JSONObject forecast = forecasts.getJSONObject(i);
-                JSONObject temperature = forecast.getJSONObject("temp");
+                if (!forecast.has("weather")) {
+                    DayForecast noDataAvailableForecast = new DayForecast.Builder(
+                            WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE).build();
+                    result.add(noDataAvailableForecast);
+                    continue;
+                }
                 JSONObject weather = forecast.getJSONArray("weather").getJSONObject(0);
-                DayForecast item = new DayForecast.Builder(mapConditionIconToCode(
-                        weather.getString("icon"), weather.getInt("id")))
-                    .setLow(sanitizeTemperature(temperature.getDouble("min"), metric))
-                    .setHigh(sanitizeTemperature(temperature.getDouble("max"), metric)).build();
-                result.add(item);
+                DayForecast.Builder item = new DayForecast.Builder(mapConditionIconToCode(
+                        weather.getString("icon"), weather.getInt("id")));
+                if (forecast.has("temp")) {
+                    JSONObject temperature = forecast.getJSONObject("temp");
+                    if (temperature.has("min")) {
+                        item.setLow(sanitizeTemperature(temperature.getDouble("min"), metric));
+                    }
+                    if (temperature.has("max")) {
+                        item.setHigh(sanitizeTemperature(temperature.getDouble("max"), metric))
+                                .build();
+                    }
+                }
+                result.add(item.build());
             }
 
             return result;
