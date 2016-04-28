@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "5faad753_7d409b36",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/HttpRetriever.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-28T21:12:02Z",
+      "side": 1,
+      "message": "Not sure why this was not checked before. Will fix it in a new patch",
+      "parentUuid": "5faad753_2bf9827f",
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_4bf63e92",
         "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
         "patchSetId": 5
@@ -47,6 +65,30 @@
       "writtenOn": "2016-04-27T07:30:48Z",
       "side": 1,
       "message": "Do you really need an application context to just access to shared preferences and get a resource strings? IHMO, the service context should be just enough",
+      "range": {
+        "startLine": 83,
+        "startChar": 19,
+        "endLine": 83,
+        "endChar": 40
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_dd742f9c",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-28T21:12:02Z",
+      "side": 1,
+      "message": "Yep, just the service context should suffice",
+      "parentUuid": "5faad753_4bf63e92",
       "range": {
         "startLine": 83,
         "startChar": 19,
@@ -82,6 +124,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_f28efa25",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-28T21:12:02Z",
+      "side": 1,
+      "message": "Not sure why didn\u0027t catch this before. Will fix it.",
+      "parentUuid": "5faad753_ebf28a9a",
+      "range": {
+        "startLine": 168,
+        "startChar": 16,
+        "endLine": 168,
+        "endChar": 27
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_cb2f8ef4",
         "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
         "patchSetId": 5
@@ -99,6 +165,24 @@
     },
     {
       "key": {
+        "uuid": "5faad753_3277b23d",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-28T21:12:02Z",
+      "side": 1,
+      "message": "This is being fixed in http://review.cyanogenmod.org/#/c/142094/",
+      "parentUuid": "5faad753_cb2f8ef4",
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_2b3e6229",
         "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
         "patchSetId": 5
@@ -110,6 +194,30 @@
       "writtenOn": "2016-04-27T07:30:48Z",
       "side": 1,
       "message": "Is shouldn\u0027t enough witht a Locale#getLanguage() and lower case?",
+      "range": {
+        "startLine": 551,
+        "startChar": 8,
+        "endLine": 551,
+        "endChar": 14
+      },
+      "revId": "65707bcf6613690b7c262448f8c2717e68ecfad0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_5274ae35",
+        "filename": "src/org/cyanogenmod/openweathermapprovider/OpenWeatherMapProviderService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 551,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-04-28T21:12:02Z",
+      "side": 1,
+      "message": "This was copied \"as is\" from LockClock :) but yeah, I think it can be changed",
+      "parentUuid": "5faad753_2b3e6229",
       "range": {
         "startLine": 551,
         "startChar": 8,
