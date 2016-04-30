@@ -16,27 +16,26 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-            android:title="@string/prefscreen_category_authentication_title">
+        android:title="@string/prefscreen_category_authentication_title">
         <EditTextPreference
-                android:key="api_key"
-                android:title="@string/prefscreen_api_key_title"
-                android:summary="@string/prefscreen_api_key_summary"
-                android:dialogTitle="@string/prefscreen_api_key_title"
-                android:defaultValue="">
-        </EditTextPreference>
+            android:key="api_key"
+            android:title="@string/prefscreen_api_key_title"
+            android:summary="@string/prefscreen_api_key_summary"
+            android:dialogTitle="@string/prefscreen_api_key_title"/>
         <PreferenceScreen
-                android:key="create_key"
-                android:title="@string/prefscreen_create_key_title"
-                android:summary="@string/prefscreen_create_key_summary">
+            android:key="create_key"
+            android:title="@string/prefscreen_create_key_title"
+            android:summary="@string/prefscreen_create_key_summary">
 
             <intent android:action="android.intent.action.VIEW"
-                    android:data="https://home.openweathermap.org/users/sign_up" />
+                android:data="https://home.openweathermap.org/users/sign_up" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/prefscreen_category_about_title">
         <Preference
-                android:key="copyright"
-                android:title="@string/prefscreen_copyright_title"
-                android:summary="@string/prefscreen_copyright_summary"/>
+            android:key="disclaimer"
+            android:persistent="false"
+            android:title="@string/prefscreen_copyright_title"
+            android:summary="@string/prefscreen_copyright_summary"/>
     </PreferenceCategory>
 </PreferenceScreen>

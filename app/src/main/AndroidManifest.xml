@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project (DvTonder)
-     Copyright (C) 2016 The CyanogenMod Project
+<!-- Copyright (C) 2016 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,28 +14,35 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.cyanogenmod.openweathermapprovider" >
+    package="org.cyanogenmod.openweathermapprovider">
 
+    <uses-permission android:name="cyanogenmod.permission.ACCESS_WEATHER_MANAGER" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-feature android:name="org.cyanogenmod.weather" android:required="true" />
 
     <application
-            android:label="@string/app_name" android:allowBackup="true">
-        <service
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+            <service
                 android:name=".OpenWeatherMapProviderService"
                 android:label="@string/app_name"
                 android:exported="true"
                 android:permission="cyanogenmod.permission.BIND_WEATHER_PROVIDER_SERVICE">
-            <intent-filter>
-                <action android:name="cyanogenmod.weatherservice.WeatherProviderService" />
-            </intent-filter>
-            <meta-data
+                <intent-filter>
+                    <action android:name="cyanogenmod.weatherservice.WeatherProviderService" />
+                </intent-filter>
+                <meta-data
                     android:name="cyanogenmod.weatherservice"
                     android:resource="@xml/openweathermap" />
-        </service>
-        <activity android:name=".SettingsActivity"
-                  android:label="@string/app_name"
-                  android:exported="true" />
-    </application>
+            </service>
+
+            <activity android:name=".SettingsActivity"
+                android:label="@string/app_name"
+                android:exported="true" />
+        </application>
+
 </manifest>
