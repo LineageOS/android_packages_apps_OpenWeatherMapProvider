@@ -15,6 +15,9 @@
      limitations under the License.
 -->
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
-    </style>
+    <string-array name="api_key_states_entries" translatable="false">
+        <item>@string/api_key_state_invalid</item>
+        <item>@string/api_key_state_pending_verification</item>
+        <item>@string/api_key_state_verified</item>
+    </string-array>
 </resources>
