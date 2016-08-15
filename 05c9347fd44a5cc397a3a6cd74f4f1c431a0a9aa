@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "1fa4df85_12b5f2ee",
+        "filename": "app/src/main/java/org/cyanogenmod/openweathermapprovider/openweathermap/OpenWeatherMapService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 14421
+      },
+      "writtenOn": "2016-08-15T01:43:47Z",
+      "side": 1,
+      "message": "Yes, it did. Updated the code to read the unit from settings",
+      "parentUuid": "5faad753_e13b58ce",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 45
+      },
+      "revId": "05c9347fd44a5cc397a3a6cd74f4f1c431a0a9aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_b4d93784",
         "filename": "app/src/test/java/org/cyanogenmod/openweathermapprovider/ExampleUnitTest.java",
         "patchSetId": 1
