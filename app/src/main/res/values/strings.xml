@@ -25,7 +25,7 @@
     <string name="prefscreen_create_key_title">Create account</string>
     <string name="prefscreen_create_key_summary">Create an account and generate your API key</string>
     <string name="api_key_not_set_message">You must set a private API key to use %1$s</string>
-    <string name="api_key_changed_verification_warning">You API key will be verified on the next weather update</string>
+    <string name="api_key_changed_verification_warning">Your API key will be verified on the next weather update</string>
 
     <string name="api_key_state_verified">Verified</string>
     <string name="api_key_state_invalid">Invalid</string>
