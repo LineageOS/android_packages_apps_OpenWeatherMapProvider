@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider.utils;
+package org.lineageos.openweathermapprovider.utils;
 
 import android.util.Log;
 

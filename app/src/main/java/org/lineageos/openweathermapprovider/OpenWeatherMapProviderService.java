@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider;
+package org.lineageos.openweathermapprovider;
 
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -22,7 +22,8 @@ import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 
-import org.cyanogenmod.openweathermapprovider.openweathermap.OpenWeatherMapService;
+import org.lineageos.openweathermapprovider.openweathermap.OpenWeatherMapService;
+import org.lineageos.openweathermapprovider.utils.Logging;
 
 import java.util.HashMap;
 import java.util.List;
@@ -35,9 +36,6 @@ import cyanogenmod.weather.WeatherLocation;
 import cyanogenmod.weatherservice.ServiceRequest;
 import cyanogenmod.weatherservice.ServiceRequestResult;
 import cyanogenmod.weatherservice.WeatherProviderService;
-
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logd;
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logw;
 
 public class OpenWeatherMapProviderService extends WeatherProviderService
         implements SharedPreferences.OnSharedPreferenceChangeListener {
@@ -85,7 +83,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
     protected void onRequestSubmitted(ServiceRequest request) {
         RequestInfo requestInfo = request.getRequestInfo();
         int requestType = requestInfo.getRequestType();
-        logd("Received request type " + requestType);
+        Logging.logd("Received request type " + requestType);
 
         if (((requestType == RequestInfo.TYPE_WEATHER_BY_GEO_LOCATION_REQ &&
                 isSameGeoLocation(requestInfo.getLocation(), mLastLocation))
@@ -138,7 +136,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
                 }
                 return;
             default:
-                logw("Received unknown request type "
+                Logging.logw("Received unknown request type "
                         + request.getRequestInfo().getRequestType());
                 break;
         }
@@ -147,7 +145,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(API_KEY)) {
-            logd("API key has changed");
+            Logging.logd("API key has changed");
             final String mApiKey = sharedPreferences.getString(key, null);
             mOpenWeatherMapService.setApiKey(mApiKey);
         }
@@ -165,13 +163,13 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
     private boolean isSameGeoLocation(Location newLocation, Location oldLocation) {
         if (newLocation == null || oldLocation == null) return false;
         float distance = newLocation.distanceTo(oldLocation);
-        logd("Distance between locations " + distance);
+        Logging.logd("Distance between locations " + distance);
         return (distance < LOCATION_DISTANCE_METERS_THRESHOLD);
     }
 
     private boolean wasRequestSubmittedTooSoon() {
         final long now = SystemClock.elapsedRealtime();
-        logd("Now " + now + " last request " + mLastRequestTimestamp);
+        Logging.logd("Now " + now + " last request " + mLastRequestTimestamp);
         return (mLastRequestTimestamp + REQUEST_THRESHOLD > now);
     }
 
@@ -203,7 +201,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
                 }
             } else {
                 // We don't know how to handle any other type of request
-                logw("Received unknown request type "+ requestType);
+                Logging.logw("Received unknown request type "+ requestType);
                 return null;
             }
         }
@@ -211,10 +209,10 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
         @Override
         protected void onPostExecute(WeatherInfo weatherInfo) {
             if (weatherInfo == null) {
-                logd("Received null weather info, failing request");
+                Logging.logd("Received null weather info, failing request");
                 mRequest.fail();
             } else {
-                logd(weatherInfo.toString());
+                Logging.logd(weatherInfo.toString());
                 ServiceRequestResult result = new ServiceRequestResult.Builder(weatherInfo).build();
                 mRequest.complete(result);
                 if (mRequest.getRequestInfo().getRequestType()
@@ -243,7 +241,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
         protected List<WeatherLocation> doInBackground(Void... params) {
             RequestInfo requestInfo = mRequest.getRequestInfo();
             if (requestInfo.getRequestType() != RequestInfo.TYPE_LOOKUP_CITY_NAME_REQ) {
-                logw("Received unsupported request type " + requestInfo.getRequestType());
+                Logging.logw("Received unsupported request type " + requestInfo.getRequestType());
                 return null;
             }
             try {
@@ -258,7 +256,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
         protected void onPostExecute(List<WeatherLocation> locations) {
             if (locations != null) {
                 for (WeatherLocation location : locations) {
-                    logd(location.toString());
+                    Logging.logd(location.toString());
                 }
                 ServiceRequestResult request = new ServiceRequestResult.Builder(locations).build();
                 mRequest.complete(request);

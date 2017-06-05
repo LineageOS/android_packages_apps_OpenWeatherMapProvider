@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider;
+package org.lineageos.openweathermapprovider;
 
 import android.app.Activity;
 import android.content.Context;
@@ -49,7 +49,7 @@ public class SettingsActivity extends Activity {
         @Override
         public void onCreate(Bundle savedInstance) {
             super.onCreate(savedInstance);
-            addPreferencesFromResource(R.xml.preferences);
+            addPreferencesFromResource(org.lineageos.openweathermapprovider.R.xml.preferences);
 
             mApiKeyPreference = (EditTextPreference) findPreference(API_KEY);
             SharedPreferences sharedPreferences
@@ -58,12 +58,12 @@ public class SettingsActivity extends Activity {
             try {
                 //lookup the value state
                 String[] stateEntries
-                        = getResources().getStringArray(R.array.api_key_states_entries);
+                        = getResources().getStringArray(org.lineageos.openweathermapprovider.R.array.api_key_states_entries);
                 String state = stateEntries[apiKeyVerificationState];
                 mApiKeyPreference.setSummary(state);
             } catch (IndexOutOfBoundsException e) {
-                mApiKeyPreference.setSummary(getString(R.string.prefscreen_api_key_summary,
-                        getString(R.string.app_name)));
+                mApiKeyPreference.setSummary(getString(org.lineageos.openweathermapprovider.R.string.prefscreen_api_key_summary,
+                        getString(org.lineageos.openweathermapprovider.R.string.app_name)));
             }
         }
 
@@ -75,8 +75,8 @@ public class SettingsActivity extends Activity {
                 SharedPreferences sp = getPreferenceManager().getSharedPreferences();
                 String apiKey = sp.getString(API_KEY, null);
                 if (apiKey == null || apiKey.equals("")) {
-                    Toast.makeText(context, getString(R.string.api_key_not_set_message,
-                            getString(R.string.app_name)), Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, getString(org.lineageos.openweathermapprovider.R.string.api_key_not_set_message,
+                            getString(org.lineageos.openweathermapprovider.R.string.app_name)), Toast.LENGTH_LONG).show();
                 }
                 mApiKeyPreference.setOnPreferenceChangeListener(this);
             }
@@ -91,8 +91,8 @@ public class SettingsActivity extends Activity {
                     sharedPreferences.edit().putInt(API_KEY_VERIFIED_STATE,
                             API_KEY_PENDING_VERIFICATION).apply();
                     mApiKeyPreference.setSummary(getResources().getStringArray(
-                            R.array.api_key_states_entries)[API_KEY_PENDING_VERIFICATION]);
-                    Toast.makeText(getActivity(), R.string.api_key_changed_verification_warning,
+                            org.lineageos.openweathermapprovider.R.array.api_key_states_entries)[API_KEY_PENDING_VERIFICATION]);
+                    Toast.makeText(getActivity(), org.lineageos.openweathermapprovider.R.string.api_key_changed_verification_warning,
                             Toast.LENGTH_LONG).show();
                     return true;
             }

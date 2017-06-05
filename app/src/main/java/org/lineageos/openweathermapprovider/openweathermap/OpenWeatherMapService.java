@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider.openweathermap;
+package org.lineageos.openweathermapprovider.openweathermap;
 
 import android.content.Context;
 import android.location.Location;
 import android.text.TextUtils;
+
+import org.lineageos.openweathermapprovider.utils.Logging;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,8 +39,6 @@ import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logd;
 
 public class OpenWeatherMapService {
 
@@ -88,7 +88,7 @@ public class OpenWeatherMapService {
                 RESULT_FORMAT, units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
-            logd(weatherResponseCall.request().toString());
+            Logging.logd(weatherResponseCall.request().toString());
             currentWeatherResponse = weatherResponseCall.execute();
         } catch (IOException e) {
             //An error occurred while talking to the server
@@ -103,12 +103,12 @@ public class OpenWeatherMapService {
                     RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
-                logd(forecastResponseCall.request().toString());
+                Logging.logd(forecastResponseCall.request().toString());
                 Response<ForecastResponse> r = forecastResponseCall.execute();
                 if (r.code() == 200) forecastResponse = r.body();
             } catch (IOException e) {
                 //this is an error we can live with
-                logd("IOException while requesting forecast " + e);
+                Logging.logd("IOException while requesting forecast " + e);
             }
             return processWeatherResponse(currentWeatherResponse.body(), forecastResponse,
                     tempUnit);
@@ -136,11 +136,11 @@ public class OpenWeatherMapService {
                 location.getLongitude(), RESULT_FORMAT, units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
-            logd(weatherResponseCall.request().toString());
+            Logging.logd(weatherResponseCall.request().toString());
             currentWeatherResponse = weatherResponseCall.execute();
         } catch (IOException e) {
             //An error occurred while talking to the server
-            logd("IOException while requesting weather " + e);
+            Logging.logd("IOException while requesting weather " + e);
             return null;
         }
 
@@ -152,12 +152,12 @@ public class OpenWeatherMapService {
                     location.getLongitude(), RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
-                logd(forecastResponseCall.request().toString());
+                Logging.logd(forecastResponseCall.request().toString());
                 Response<ForecastResponse> r = forecastResponseCall.execute();
                 if (r.code() == 200) forecastResponse = r.body();
             } catch (IOException e) {
                 //this is an error we can live with
-                logd("IOException while requesting forecast " + e);
+                Logging.logd("IOException while requesting forecast " + e);
             }
             return processWeatherResponse(currentWeatherResponse.body(), forecastResponse,
                     tempUnit);
@@ -251,10 +251,10 @@ public class OpenWeatherMapService {
 
         Response<LookupCityResponse> lookupResponse;
         try {
-            logd(lookupCityCall.request().toString());
+            Logging.logd(lookupCityCall.request().toString());
             lookupResponse = lookupCityCall.execute();
         } catch (IOException e) {
-            logd("IOException while looking up city name " + e);
+            Logging.logd("IOException while looking up city name " + e);
             //Return empty list to prevent NPE
             return new ArrayList<>();
         }

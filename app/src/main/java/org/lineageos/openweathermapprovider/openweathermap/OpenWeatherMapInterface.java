@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider.openweathermap;
+package org.lineageos.openweathermapprovider.openweathermap;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

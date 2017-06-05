@@ -15,4 +15,4 @@
      limitations under the License.
 -->
 <weather-provider-service xmlns:android="http://schemas.android.com/apk/res/android"
-    android:settingsActivity="org.cyanogenmod.openweathermapprovider.SettingsActivity"/>
+    android:settingsActivity="org.lineageos.openweathermapprovider.SettingsActivity"/>
