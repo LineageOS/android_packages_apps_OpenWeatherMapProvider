@@ -35,7 +35,10 @@
         <Preference
             android:key="disclaimer"
             android:persistent="false"
-            android:title="@string/prefscreen_copyright_title"
-            android:summary="@string/prefscreen_copyright_summary"/>
+            android:title="@string/prefscreen_disclaimer_title"
+            android:summary="@string/prefscreen_disclaimer_summary"/>
+        <Preference
+            android:title="@string/copyright_title"
+            android:summary="@string/copyright_summary" />
     </PreferenceCategory>
 </PreferenceScreen>
