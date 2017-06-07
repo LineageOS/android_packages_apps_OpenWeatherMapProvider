@@ -1,5 +1,6 @@
 /*
  *  Copyright (C) 2016 The CyanogenMod Project
+ *  Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider.openweathermap;
+package org.lineageos.openweathermapprovider.openweathermap;
 
 import android.content.Context;
 import android.location.Location;
@@ -38,7 +39,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logd;
+import static org.lineageos.openweathermapprovider.utils.Logging.logd;
 
 public class OpenWeatherMapService {
 

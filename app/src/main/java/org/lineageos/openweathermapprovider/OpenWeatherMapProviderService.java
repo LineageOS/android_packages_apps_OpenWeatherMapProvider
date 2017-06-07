@@ -1,5 +1,6 @@
 /*
  *  Copyright (C) 2016 The CyanogenMod Project
+ *  Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.openweathermapprovider;
+package org.lineageos.openweathermapprovider;
 
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -22,7 +23,7 @@ import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 
-import org.cyanogenmod.openweathermapprovider.openweathermap.OpenWeatherMapService;
+import org.lineageos.openweathermapprovider.openweathermap.OpenWeatherMapService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -36,8 +37,8 @@ import cyanogenmod.weatherservice.ServiceRequest;
 import cyanogenmod.weatherservice.ServiceRequestResult;
 import cyanogenmod.weatherservice.WeatherProviderService;
 
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logd;
-import static org.cyanogenmod.openweathermapprovider.utils.Logging.logw;
+import static org.lineageos.openweathermapprovider.utils.Logging.logd;
+import static org.lineageos.openweathermapprovider.utils.Logging.logw;
 
 public class OpenWeatherMapProviderService extends WeatherProviderService
         implements SharedPreferences.OnSharedPreferenceChangeListener {
