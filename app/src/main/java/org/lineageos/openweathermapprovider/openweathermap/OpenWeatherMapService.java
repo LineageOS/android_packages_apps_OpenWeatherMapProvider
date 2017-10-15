@@ -42,11 +42,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class OpenWeatherMapService {
 
-    private static final String RESULT_FORMAT = "json";
-
-    // TODO Add an preference in settings to customize this
-    private static final int FORECAST_DAYS = 5;
-
     // OpenWeatherMap allows like or accurate, let's use like so we return more choices to the user
     private static final String SEARCH_CITY_TYPE = "like";
 
@@ -85,7 +80,7 @@ public class OpenWeatherMapService {
         final String units = mapTempUnit(tempUnit);
         Call<CurrentWeatherResponse> weatherResponseCall
                 = mOpenWeatherMapInterface.queryCurrentWeather(weatherLocation.getCityId(),
-                RESULT_FORMAT, units, language, mApiKey);
+                units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
             Logging.logd(weatherResponseCall.request().toString());
@@ -100,7 +95,7 @@ public class OpenWeatherMapService {
             //but the user is expecting both the current weather and the forecast
             Call<ForecastResponse> forecastResponseCall
                     = mOpenWeatherMapInterface.queryForecast(weatherLocation.getCityId(),
-                    RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
+                    units, language, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
                 Logging.logd(forecastResponseCall.request().toString());
@@ -133,7 +128,7 @@ public class OpenWeatherMapService {
         final String units = mapTempUnit(tempUnit);
         Call<CurrentWeatherResponse> weatherResponseCall
                 = mOpenWeatherMapInterface.queryCurrentWeather(location.getLatitude(),
-                location.getLongitude(), RESULT_FORMAT, units, language, mApiKey);
+                location.getLongitude(), units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
             Logging.logd(weatherResponseCall.request().toString());
@@ -149,7 +144,7 @@ public class OpenWeatherMapService {
             //but the user is expecting both the current weather and the forecast
             Call<ForecastResponse> forecastResponseCall
                     = mOpenWeatherMapInterface.queryForecast(location.getLatitude(),
-                    location.getLongitude(), RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
+                    location.getLongitude(), units, language, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
                 Logging.logd(forecastResponseCall.request().toString());
@@ -245,9 +240,8 @@ public class OpenWeatherMapService {
             throw new InvalidApiKeyException();
         }
 
-        Call<LookupCityResponse> lookupCityCall
-                = mOpenWeatherMapInterface.lookupCity(cityName, RESULT_FORMAT, getLanguageCode(),
-                        SEARCH_CITY_TYPE, mApiKey);
+        Call<LookupCityResponse> lookupCityCall = mOpenWeatherMapInterface.lookupCity(
+                cityName, getLanguageCode(), SEARCH_CITY_TYPE, mApiKey);
 
         Response<LookupCityResponse> lookupResponse;
         try {

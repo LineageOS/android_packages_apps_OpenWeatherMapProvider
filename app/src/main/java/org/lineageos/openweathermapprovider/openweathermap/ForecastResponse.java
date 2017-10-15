@@ -33,23 +33,26 @@ public class ForecastResponse implements Serializable {
 
     static class DayForecast {
 
+        private Main main;
         private List<Weather> weather;
-        private Temp temp;
 
         public DayForecast() {}
+
+        static class Main {
+            public Main() {}
+            private double temp = Double.NaN;
+            @SerializedName("temp_min")
+            private double minTemp = Double.NaN;
+            @SerializedName("temp_max")
+            private double maxTemp = Double.NaN;
+        }
+
         static class Weather {
             @SerializedName("id")
             private int code = WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE;
             private String icon;
 
             public Weather() {}
-        }
-
-        static class Temp {
-            double min = Double.NaN;
-            double max = Double.NaN;
-
-            public Temp() {}
         }
 
         public int getConditionCode() {
@@ -69,11 +72,11 @@ public class ForecastResponse implements Serializable {
         }
 
         public double getMinTemp() {
-            return temp.min;
+            return main.minTemp;
         }
 
         public double getMaxTemp() {
-            return temp.max;
+            return main.maxTemp;
         }
     }
 

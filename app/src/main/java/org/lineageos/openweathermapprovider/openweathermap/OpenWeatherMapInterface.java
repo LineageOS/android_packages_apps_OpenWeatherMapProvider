@@ -23,25 +23,22 @@ import retrofit2.http.Query;
 public interface OpenWeatherMapInterface {
     @GET("/data/2.5/weather")
     Call<CurrentWeatherResponse> queryCurrentWeather(@Query("id") String cityId,
-        @Query("mode") String mode, @Query("units") String units, @Query("lang") String lang,
-            @Query("appid") String appid);
+        @Query("units") String units, @Query("lang") String lang, @Query("appid") String appid);
 
     @GET("/data/2.5/weather")
     Call<CurrentWeatherResponse> queryCurrentWeather(@Query("lat") double lat,
-        @Query("lon") double lon, @Query("mode") String mode, @Query("units") String units,
-            @Query("lang") String lang, @Query("appid") String appid);
-
-    @GET("/data/2.5/forecast/daily")
-    Call<ForecastResponse> queryForecast(@Query("id") String cityId, @Query("mode") String mode,
-        @Query("units") String units, @Query("lang") String lang, @Query("cnt") int daysCount,
+        @Query("lon") double lon, @Query("units") String units, @Query("lang") String lang,
             @Query("appid") String appid);
 
-    @GET("/data/2.5/forecast/daily")
+    @GET("/data/2.5/forecast")
+    Call<ForecastResponse> queryForecast(@Query("id") String cityId, @Query("units") String units,
+        @Query("lang") String lang, @Query("appid") String appid);
+
+    @GET("/data/2.5/forecast")
     Call<ForecastResponse> queryForecast(@Query("lat") double lat, @Query("lon") double lon,
-        @Query("mode") String mode, @Query("units") String units, @Query("lang") String lang,
-            @Query("cnt") int daysCount, @Query("appid") String appid);
+        @Query("units") String units, @Query("lang") String lang, @Query("appid") String appid);
 
     @GET("/data/2.5/find")
-    Call<LookupCityResponse> lookupCity(@Query("q") String cityName, @Query("mode") String mode,
-        @Query("lang") String lang, @Query("type") String searchType, @Query("appid") String appid);
+    Call<LookupCityResponse> lookupCity(@Query("q") String cityName, @Query("lang") String lang,
+        @Query("type") String searchType, @Query("appid") String appid);
 }
