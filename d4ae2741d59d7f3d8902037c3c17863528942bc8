@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b12650ce_93c6f3d4",
+        "filename": "app/src/main/java/org/lineageos/openweathermapprovider/openweathermap/ForecastResponse.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-10-15T17:17:04Z",
+      "side": 1,
+      "message": "Needless change?",
+      "revId": "d4ae2741d59d7f3d8902037c3c17863528942bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
