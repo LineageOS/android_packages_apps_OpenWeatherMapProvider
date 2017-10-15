@@ -16,6 +16,24 @@
       "revId": "3fe41331dcb56f236e89f5f988dcc81905fc28b6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9755fd3f_8461b001",
+        "filename": "app/src/main/java/org/lineageos/openweathermapprovider/openweathermap/OpenWeatherMapService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2017-10-15T17:51:17Z",
+      "side": 0,
+      "message": "Doesn\u0027t hurt doesn\u0027t mean we have to keep it.\nhttps://openweathermap.org/forecast5#format the api example even shows to not pass it. And additionally: The api isn\u0027t worth having if they changed such things without versioning (now using version 2.5). So having code just to have it is useless.",
+      "parentUuid": "8d8df06c_aebaf5b5",
+      "revId": "3fe41331dcb56f236e89f5f988dcc81905fc28b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
