@@ -1,5 +1,6 @@
 /*
  *  Copyright (C) 2016 The CyanogenMod Project
+ *  Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +25,7 @@ import org.lineageos.openweathermapprovider.utils.Logging;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -42,10 +44,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class OpenWeatherMapService {
 
-    private static final String RESULT_FORMAT = "json";
+    private static final int FORECAST_ITEMS_PER_DAY = 8;
 
-    // TODO Add an preference in settings to customize this
-    private static final int FORECAST_DAYS = 5;
+    private static final double MPS_TO_KPH = 3.6;
 
     // OpenWeatherMap allows like or accurate, let's use like so we return more choices to the user
     private static final String SEARCH_CITY_TYPE = "like";
@@ -85,7 +86,7 @@ public class OpenWeatherMapService {
         final String units = mapTempUnit(tempUnit);
         Call<CurrentWeatherResponse> weatherResponseCall
                 = mOpenWeatherMapInterface.queryCurrentWeather(weatherLocation.getCityId(),
-                RESULT_FORMAT, units, language, mApiKey);
+                units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
             Logging.logd(weatherResponseCall.request().toString());
@@ -100,7 +101,7 @@ public class OpenWeatherMapService {
             //but the user is expecting both the current weather and the forecast
             Call<ForecastResponse> forecastResponseCall
                     = mOpenWeatherMapInterface.queryForecast(weatherLocation.getCityId(),
-                    RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
+                    units, language, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
                 Logging.logd(forecastResponseCall.request().toString());
@@ -133,7 +134,7 @@ public class OpenWeatherMapService {
         final String units = mapTempUnit(tempUnit);
         Call<CurrentWeatherResponse> weatherResponseCall
                 = mOpenWeatherMapInterface.queryCurrentWeather(location.getLatitude(),
-                location.getLongitude(), RESULT_FORMAT, units, language, mApiKey);
+                location.getLongitude(), units, language, mApiKey);
         Response<CurrentWeatherResponse> currentWeatherResponse;
         try {
             Logging.logd(weatherResponseCall.request().toString());
@@ -149,7 +150,7 @@ public class OpenWeatherMapService {
             //but the user is expecting both the current weather and the forecast
             Call<ForecastResponse> forecastResponseCall
                     = mOpenWeatherMapInterface.queryForecast(location.getLatitude(),
-                    location.getLongitude(), RESULT_FORMAT, units, language, FORECAST_DAYS, mApiKey);
+                    location.getLongitude(), units, language, mApiKey);
             ForecastResponse forecastResponse = null;
             try {
                 Logging.logd(forecastResponseCall.request().toString());
@@ -204,29 +205,82 @@ public class OpenWeatherMapService {
         }
 
         final double windDir = currentWeatherResponse.getWindDirection();
-        final double windSpeed = currentWeatherResponse.getWindSpeed();
+        double windSpeed = currentWeatherResponse.getWindSpeed();
         if (!Double.isNaN(windDir) && !Double.isNaN(windSpeed)) {
-            builder.setWind(windSpeed, windDir, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
+            if (tempUnit == WeatherContract.WeatherColumns.TempUnit.CELSIUS) {
+                windSpeed *= MPS_TO_KPH;
+            }
+            builder.setWind(windSpeed * MPS_TO_KPH, windDir,
+                    WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
         }
 
         if (forecastResponse != null) {
             List<WeatherInfo.DayForecast> forecastList = new ArrayList<>();
-            for (ForecastResponse.DayForecast forecast : forecastResponse.getForecastList()) {
-                WeatherInfo.DayForecast.Builder forecastBuilder
-                        = new WeatherInfo.DayForecast.Builder(mapConditionIconToCode(
-                                forecast.getWeatherIconId(), forecast.getConditionCode()));
+            List<ForecastResponse.DayForecast> forecastResponses =
+                    forecastResponse.getForecastList();
+            double dayMinimum = Double.NaN;
+            double dayMaximum = Double.NaN;
+            WeatherInfo.DayForecast.Builder forecastBuilder = null;
+            int maxItems = forecastResponses.size();
+            for (int i = 0; i < maxItems; i++) {
+                ForecastResponse.DayForecast forecast = forecastResponses.get(i);
+
+                Calendar forecastCalendar = Calendar.getInstance();
+                forecastCalendar.setTimeInMillis(forecast.getTimestamp() * 1000);
+
+                // If the first forecast item is for the next day, add a forecast item with
+                // today's values so the list is populated correctly.
+                if (i == 0) {
+                    int forecastDay = forecastCalendar.get(Calendar.DAY_OF_YEAR);
+                    int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+                    if (currentDay != forecastDay) {
+                        forecastBuilder = new WeatherInfo.DayForecast.Builder(
+                                mapConditionIconToCode(currentWeatherResponse.getWeatherIconId(),
+                                        currentWeatherResponse.getConditionCode()));
+                        if (!Double.isNaN(todaysHigh)) {
+                            forecastBuilder.setHigh(todaysHigh);
+                        }
+                        if (!Double.isNaN(todaysLow)) {
+                            forecastBuilder.setLow(todaysLow);
+                        }
+                        forecastList.add(forecastBuilder.build());
+
+                        // Remove items from the list so we add the forecast for 5 days only
+                        maxItems -= FORECAST_ITEMS_PER_DAY;
+                    }
+                }
 
                 final double max = forecast.getMaxTemp();
-                if (!Double.isNaN(max)) {
-                    forecastBuilder.setHigh(max);
+                if (!Double.isNaN(max) && (Double.isNaN(dayMaximum) || max > dayMaximum)) {
+                    dayMaximum = max;
                 }
 
                 final double min = forecast.getMinTemp();
-                if (!Double.isNaN(min)) {
-                    forecastBuilder.setLow(min);
+                if (!Double.isNaN(min) && (Double.isNaN(dayMinimum) || min < dayMinimum)) {
+                    dayMinimum = min;
                 }
 
-                forecastList.add(forecastBuilder.build());
+                // Every 8th (8 x 3h = 24h) time create the builder with the result's weather
+                // so you get a forecast for the same time every day
+                if (i % FORECAST_ITEMS_PER_DAY == 0) {
+                    forecastBuilder = new WeatherInfo.DayForecast.Builder(mapConditionIconToCode(
+                            forecast.getWeatherIconId(), forecast.getConditionCode()));
+                }
+
+                // If it's the last result of each day (within 3 hours from the next day),
+                // build the forecast and add the calculated min and max temperatures
+                int forecastHour = forecastCalendar.get(Calendar.HOUR_OF_DAY);
+                if (forecastHour >= 21) {
+                    if (!Double.isNaN(dayMinimum)) {
+                        forecastBuilder.setLow(dayMinimum);
+                    }
+                    if (!Double.isNaN(dayMaximum)) {
+                        forecastBuilder.setHigh(dayMaximum);
+                    }
+                    forecastList.add(forecastBuilder.build());
+                    dayMinimum = Double.NaN;
+                    dayMaximum = Double.NaN;
+                }
             }
             builder.setForecast(forecastList);
         }
@@ -245,9 +299,8 @@ public class OpenWeatherMapService {
             throw new InvalidApiKeyException();
         }
 
-        Call<LookupCityResponse> lookupCityCall
-                = mOpenWeatherMapInterface.lookupCity(cityName, RESULT_FORMAT, getLanguageCode(),
-                        SEARCH_CITY_TYPE, mApiKey);
+        Call<LookupCityResponse> lookupCityCall = mOpenWeatherMapInterface.lookupCity(
+                cityName, getLanguageCode(), SEARCH_CITY_TYPE, mApiKey);
 
         Response<LookupCityResponse> lookupResponse;
         try {
