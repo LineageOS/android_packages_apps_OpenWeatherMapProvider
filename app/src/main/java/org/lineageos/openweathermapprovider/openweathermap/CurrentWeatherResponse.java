@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.List;
 
-import cyanogenmod.providers.WeatherContract;
+import lineageos.providers.WeatherContract;
 
 public class CurrentWeatherResponse implements Serializable {
     @SerializedName("cod")

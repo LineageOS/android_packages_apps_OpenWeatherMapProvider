@@ -32,10 +32,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import cyanogenmod.providers.CMSettings;
-import cyanogenmod.providers.WeatherContract;
-import cyanogenmod.weather.WeatherInfo;
-import cyanogenmod.weather.WeatherLocation;
+import lineageos.providers.LineageSettings;
+import lineageos.providers.WeatherContract;
+import lineageos.weather.WeatherInfo;
+import lineageos.weather.WeatherLocation;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -535,10 +535,10 @@ public class OpenWeatherMapService {
 
     private int getTempUnitFromSettings() {
         try {
-            final int tempUnit = CMSettings.Global.getInt(mContext.getContentResolver(),
-                    CMSettings.Global.WEATHER_TEMPERATURE_UNIT);
+            final int tempUnit = LineageSettings.Global.getInt(mContext.getContentResolver(),
+                    LineageSettings.Global.WEATHER_TEMPERATURE_UNIT);
             return tempUnit;
-        } catch (CMSettings.CMSettingNotFoundException e) {
+        } catch (LineageSettings.LineageSettingNotFoundException e) {
             //Default to metric
             return WeatherContract.WeatherColumns.TempUnit.CELSIUS;
         }

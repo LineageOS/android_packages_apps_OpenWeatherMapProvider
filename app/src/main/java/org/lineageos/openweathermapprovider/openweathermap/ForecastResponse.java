@@ -23,7 +23,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import cyanogenmod.providers.WeatherContract;
+import lineageos.providers.WeatherContract;
 
 public class ForecastResponse implements Serializable {
 

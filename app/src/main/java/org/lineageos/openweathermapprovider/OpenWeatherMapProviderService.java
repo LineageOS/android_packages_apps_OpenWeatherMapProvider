@@ -29,13 +29,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cyanogenmod.weather.CMWeatherManager;
-import cyanogenmod.weather.RequestInfo;
-import cyanogenmod.weather.WeatherInfo;
-import cyanogenmod.weather.WeatherLocation;
-import cyanogenmod.weatherservice.ServiceRequest;
-import cyanogenmod.weatherservice.ServiceRequestResult;
-import cyanogenmod.weatherservice.WeatherProviderService;
+import lineageos.weather.LineageWeatherManager;
+import lineageos.weather.RequestInfo;
+import lineageos.weather.WeatherInfo;
+import lineageos.weather.WeatherLocation;
+import lineageos.weatherservice.ServiceRequest;
+import lineageos.weatherservice.ServiceRequestResult;
+import lineageos.weatherservice.WeatherProviderService;
 
 public class OpenWeatherMapProviderService extends WeatherProviderService
         implements SharedPreferences.OnSharedPreferenceChangeListener {
@@ -90,7 +90,7 @@ public class OpenWeatherMapProviderService extends WeatherProviderService
                 || (requestType == RequestInfo.TYPE_WEATHER_BY_WEATHER_LOCATION_REQ &&
                 isSameWeatherLocation(requestInfo.getWeatherLocation(),
                         mLastWeatherLocation))) && wasRequestSubmittedTooSoon()) {
-            request.reject(CMWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
+            request.reject(LineageWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
             return;
         }
 
