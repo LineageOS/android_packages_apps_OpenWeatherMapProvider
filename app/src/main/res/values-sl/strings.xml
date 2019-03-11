@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Nastavitve</string>
     <string name="prefscreen_category_about_title">O aplikaciji</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Ključ API</string>
     <string name="prefscreen_api_key_summary">Vaš zasebni ključ API za dostop do %1$s vremenskih podatkov</string>
     <string name="prefscreen_create_key_title">Ustvari račun</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Potrjen</string>
     <string name="api_key_state_invalid">Neveljaven</string>
     <string name="api_key_state_pending_verification">Preverjanje na čakanju</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Izjava o omejitvi odgovornosti</string>
     <string name="prefscreen_disclaimer_summary">Podatki priskrbljeni s to aplikacijo so namenjeni zgolj splošnemu informiranju</string>
     <string name="copyright_title">Avtorske pravice</string>

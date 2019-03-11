@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Innstillinger</string>
     <string name="prefscreen_category_about_title">Om</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API-nøkkel</string>
     <string name="prefscreen_api_key_summary">Din private API-nøkkel for å få tilgang til %1$s værdata</string>
     <string name="prefscreen_create_key_title">Lag konto</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Bekreftet</string>
     <string name="api_key_state_invalid">Ugyldig</string>
     <string name="api_key_state_pending_verification">Venter bekreftelse</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Ansvarsfraskrivelse</string>
     <string name="prefscreen_disclaimer_summary">Informasjonen som blir levert av denne appen, blir kun levert med tanke på å formidle generell informasjon</string>
     <string name="copyright_title">Opphavsrett</string>

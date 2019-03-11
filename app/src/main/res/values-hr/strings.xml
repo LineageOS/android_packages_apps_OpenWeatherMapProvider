@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Postavke</string>
     <string name="prefscreen_category_about_title">O</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API ključ</string>
     <string name="prefscreen_api_key_summary">Vaš privatni API ključ za pristup %1$s meteorološkim podacima</string>
     <string name="prefscreen_create_key_title">Izradi račun</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Potvrđeno</string>
     <string name="api_key_state_invalid">Nevažeći</string>
     <string name="api_key_state_pending_verification">Čekanje potvrde</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Odricanje</string>
     <string name="prefscreen_disclaimer_summary">Informacije koje pruža ova aplikacija pružaju se samo u svrhu općih informacija</string>
     <string name="copyright_title">Autorska prava</string>

@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Setări</string>
     <string name="prefscreen_category_about_title">Despre</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Cheie API</string>
     <string name="prefscreen_api_key_summary">Cheia dvs. privată API pentru a accesa datele despre vreme %1$s</string>
     <string name="prefscreen_create_key_title">Creați un cont</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Verificată</string>
     <string name="api_key_state_invalid">Invalidă</string>
     <string name="api_key_state_pending_verification">În curs de verificare</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Declaraţie</string>
     <string name="prefscreen_disclaimer_summary">Informaţiile furnizate de această aplicaţie sunt prevăzute numai în scopuri de informare generală</string>
     <string name="copyright_title">Copyright</string>

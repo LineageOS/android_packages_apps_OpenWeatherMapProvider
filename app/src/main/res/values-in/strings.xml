@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Setelan</string>
     <string name="prefscreen_category_about_title">Tentang</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Kunci API</string>
     <string name="prefscreen_api_key_summary">Kunci API pribadi Anda untuk mengakses %1$s data cuaca</string>
     <string name="prefscreen_create_key_title">Buat akun</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Terverifikasi</string>
     <string name="api_key_state_invalid">Tidak valid</string>
     <string name="api_key_state_pending_verification">Verifikasi tertunda</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Penyanggahan</string>
     <string name="prefscreen_disclaimer_summary">Informasi yang diberikan oleh aplikasi ini disediakan untuk informasi tujuan umum saja</string>
     <string name="copyright_title">Hak Cipta</string>

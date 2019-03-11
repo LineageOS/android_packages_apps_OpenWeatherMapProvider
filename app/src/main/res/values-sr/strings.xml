@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Подешавања</string>
     <string name="prefscreen_category_about_title">Информације</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API Кључ</string>
     <string name="prefscreen_api_key_summary">Твој приватни API кључ за приступ %1$s временским подацима</string>
     <string name="prefscreen_create_key_title">Направи налог</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Потврђено</string>
     <string name="api_key_state_invalid">Неважеће</string>
     <string name="api_key_state_pending_verification">Очекујући потврду</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Одрицање од одговорности</string>
     <string name="prefscreen_disclaimer_summary">Информације које сте добили од ове апликације су дате само за потребе опште информисаности</string>
     <string name="copyright_title">Ауторска права</string>

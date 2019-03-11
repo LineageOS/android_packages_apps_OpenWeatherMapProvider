@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Настройки</string>
     <string name="prefscreen_category_about_title">Относно</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API ключ</string>
     <string name="prefscreen_api_key_summary">Вашия API ключ за достъп до %1$s метеорологични данни</string>
     <string name="prefscreen_create_key_title">Създаване на потребител</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Проверен</string>
     <string name="api_key_state_invalid">Невалиден</string>
     <string name="api_key_state_pending_verification">Чакащ проверка</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Общи условия</string>
     <string name="prefscreen_disclaimer_summary">Информацията, предоставена от това приложение е предоставена само за обща информация</string>
     <string name="copyright_title">Авторски права</string>

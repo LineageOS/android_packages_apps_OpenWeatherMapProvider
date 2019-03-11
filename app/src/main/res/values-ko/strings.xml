@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">설정</string>
     <string name="prefscreen_category_about_title">정보</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API 키</string>
     <string name="prefscreen_api_key_summary">%1$s 날씨 정보를 사용하기 위한 개인 API 키</string>
     <string name="prefscreen_create_key_title">계정 만들기</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">확인됨</string>
     <string name="api_key_state_invalid">올바르지 않음</string>
     <string name="api_key_state_pending_verification">확인 대기 중</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">면책 조항</string>
     <string name="prefscreen_disclaimer_summary">이 응용 프로그램이 제공하는 정보는 일반적인 정보 목적으로만 제공됩니다.</string>
     <string name="copyright_title">저작권</string>

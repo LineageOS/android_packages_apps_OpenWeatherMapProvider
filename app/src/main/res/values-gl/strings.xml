@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Axustes</string>
     <string name="prefscreen_category_about_title">Sobre</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Chave da API</string>
     <string name="prefscreen_api_key_summary">A túa chave privada da API para acceder aos datos meteorolóxicos de %1$s</string>
     <string name="prefscreen_create_key_title">Crear conta</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Verificada</string>
     <string name="api_key_state_invalid">Inválida</string>
     <string name="api_key_state_pending_verification">Verificación pendente</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Aviso legal</string>
     <string name="prefscreen_disclaimer_summary">A información fornecida por este aplicación é só para fins de información xeral</string>
     <string name="copyright_title">Copyright</string>

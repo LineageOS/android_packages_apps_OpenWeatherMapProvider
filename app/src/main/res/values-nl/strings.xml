@@ -19,14 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Instellingen</string>
     <string name="prefscreen_category_about_title">Over</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API-sleutel</string>
     <string name="prefscreen_api_key_summary">Uw persoonlijke API-sleutel om toegang te krijgen tot weergegevens van %1$s</string>
     <string name="prefscreen_create_key_title">Account aanmaken</string>
     <string name="prefscreen_create_key_summary">Account aanmaken en API-sleutel genereren</string>
     <string name="api_key_state_verified">Geverifieerd</string>
     <string name="api_key_state_invalid">Ongeldig</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Disclaimer</string>
     <string name="prefscreen_disclaimer_summary">De informatie die door deze app gegeven wordt, dient enkel voor algemene informatiedoeleinden</string>
     <string name="copyright_title">Copyright</string>

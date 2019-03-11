@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Einstellungen</string>
     <string name="prefscreen_category_about_title">Über</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API-Schlüssel</string>
     <string name="prefscreen_api_key_summary">Ihr privater API-Schlüssel für den Zugriff auf %1$s Wetterdaten</string>
     <string name="prefscreen_create_key_title">Konto erstellen</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Überprüft</string>
     <string name="api_key_state_invalid">Ungültig</string>
     <string name="api_key_state_pending_verification">Ausstehende Überprüfung</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Haftungsausschluss</string>
     <string name="prefscreen_disclaimer_summary">Die von dieser Anwendung zur Verfügung gestellten Informationen dienen lediglich allgemeinen Informationszwecken</string>
     <string name="copyright_title">Copyright</string>

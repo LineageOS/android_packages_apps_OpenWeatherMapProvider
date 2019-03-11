@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Nastavenia</string>
     <string name="prefscreen_category_about_title">Informácie</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API kľúč</string>
     <string name="prefscreen_api_key_summary">Váš súkromný API kľúč pre prístup k údajom o počasí %1$s</string>
     <string name="prefscreen_create_key_title">Vytvoriť účet</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Overený</string>
     <string name="api_key_state_invalid">Neplatný</string>
     <string name="api_key_state_pending_verification">Čakajúce overenie</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Zrieknutie sa práv</string>
     <string name="prefscreen_disclaimer_summary">Informácie poskytované touto aplikáciou sú poskytované len na všeobecné informačné účely</string>
     <string name="copyright_title">Autorské práva</string>

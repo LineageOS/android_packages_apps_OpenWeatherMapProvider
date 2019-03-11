@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Ezarpenak</string>
     <string name="prefscreen_category_about_title">Honi buruz</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API gakoa</string>
     <string name="prefscreen_api_key_summary">Zure API gako pribatua %1$s zerbitzariko eguraldi-datuak atzitzeko</string>
     <string name="prefscreen_create_key_title">Sortu kontua</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Egiaztatua</string>
     <string name="api_key_state_invalid">Baliogabea</string>
     <string name="api_key_state_pending_verification">Egiaztaketa falta da</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Ezespena</string>
     <string name="prefscreen_disclaimer_summary">Aplikazio honek emandako informazioa informazio orokorrerako ematen da besterik ez</string>
     <string name="copyright_title">Copyrighta</string>

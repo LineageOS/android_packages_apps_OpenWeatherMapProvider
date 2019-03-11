@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Ρυθμίσεις</string>
     <string name="prefscreen_category_about_title">Σχετικά</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Κλειδί API</string>
     <string name="prefscreen_api_key_summary">Το ιδιωτικό σας κλειδί API για να αποκτήσετε πρόσβαση στα καιρικά δεδομένα %1$s</string>
     <string name="prefscreen_create_key_title">Δημιουργία λογαριασμού</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Επαληθευμένο</string>
     <string name="api_key_state_invalid">Μη έγκυρο</string>
     <string name="api_key_state_pending_verification">Εκκρεμής επαλήθευση</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Αποποίηση ευθυνών</string>
     <string name="prefscreen_disclaimer_summary">Οι πληροφορίες που παρέχονται από αυτήν την εφαρμογή παρέχονται για γενική ενημέρωση και μόνο</string>
     <string name="copyright_title">Πνευματικά δικαιώματα</string>

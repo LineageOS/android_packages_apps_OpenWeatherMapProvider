@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Ayarlar</string>
     <string name="prefscreen_category_about_title">Hakkında</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API anahtarı</string>
     <string name="prefscreen_api_key_summary">%1$s hava durumu verilerine erişmek için özel API anahtarınız</string>
     <string name="prefscreen_create_key_title">Hesap oluştur</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Doğrulandı</string>
     <string name="api_key_state_invalid">Geçersiz</string>
     <string name="api_key_state_pending_verification">Doğrulama beklemede</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Sağlayıcı</string>
     <string name="prefscreen_disclaimer_summary">Bu uygulama tarafından sağlanan bilgiler sadece genel bilgi amaçlı verilmektedir</string>
     <string name="copyright_title">Telif hakkı</string>

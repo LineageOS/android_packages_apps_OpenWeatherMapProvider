@@ -17,9 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
+    <string name="prefscreen_category_authentication_title">Gosodiadau</string>
+    <string name="prefscreen_category_about_title">Ynghylch</string>
+    <string name="prefscreen_api_key_title">Allwedd API</string>
     <string name="prefscreen_api_key_summary">Dy allwedd API preifat i gael mynediad at ddata tywydd %1$s</string>
+    <string name="prefscreen_create_key_title">Creu cyfrif</string>
+    <string name="prefscreen_create_key_summary">Creu cyfrif a chynhyrchu dy allwedd API</string>
     <string name="api_key_not_set_message">Rhaid gosod allwedd API preifat er mwyn defnyddio %1$s</string>
     <string name="api_key_changed_verification_warning">Caiff dy allwedd API ei ddilysu gyda\'r diweddariad tywydd nesaf</string>
-    <!-- Copyright and disclaimers -->
+    <string name="api_key_state_verified">Dilysiwyd</string>
+    <string name="api_key_state_invalid">Annilys</string>
+    <string name="api_key_state_pending_verification">Yn disgwyl am ddilysiad</string>
+    <string name="prefscreen_disclaimer_title">Ymwrthodiad</string>
+    <string name="prefscreen_disclaimer_summary">Darperir y wybodaeth gan yr ap hwn ar gyfer gwybodaeth gyffredinol yn unig</string>
+    <string name="copyright_title">Hawlfraint</string>
+    <string name="copyright_summary">Mae OpenWeatherMap yn nod masnach wedi\'i gofrestru i OpenWeatherMap Inc. yn Unol Daleithiau America ac yn rhyngwladol.</string>
 </resources>
