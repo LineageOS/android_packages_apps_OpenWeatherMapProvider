@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Configuració</string>
     <string name="prefscreen_category_about_title">Quant a</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Clau d\'API</string>
     <string name="prefscreen_api_key_summary">La teva clau API privada per accedir a les dades meteorològiques de %1$s</string>
     <string name="prefscreen_create_key_title">Crea un compte</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Verificada</string>
     <string name="api_key_state_invalid">Invàlida</string>
     <string name="api_key_state_pending_verification">Pendent de verificació</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Renúncia</string>
     <string name="prefscreen_disclaimer_summary">La informació proporcionada per aquesta aplicació es proporciona només per a finalitats d\'informació general</string>
     <string name="copyright_title">Llicència</string>

@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Roghainnean</string>
     <string name="prefscreen_category_about_title">Mu dhèidhinn</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Iuchair API</string>
     <string name="prefscreen_api_key_summary">An iuchair API phrìobhaideach agad airson dàta aimsire %1$s inntrigeadh</string>
     <string name="prefscreen_create_key_title">Cruthaich cunntas</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Air a dhearbhadh</string>
     <string name="api_key_state_invalid">Mì-dhligheach</string>
     <string name="api_key_state_pending_verification">Ri dhearbhadh</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Aithris-àichidh</string>
     <string name="prefscreen_disclaimer_summary">Tha am fiosrachadh a sholaireas an aplacaid seo a chum fiosrachaidh choitchinn a-mhàin</string>
     <string name="copyright_title">Còir-lethbhreac</string>

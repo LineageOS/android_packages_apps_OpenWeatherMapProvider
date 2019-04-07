@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Asetukset</string>
     <string name="prefscreen_category_about_title">Tietoja</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API-avain</string>
     <string name="prefscreen_api_key_summary">Oma yksityinen API-avain käyttääksesi palvelun %1$s säätietoja</string>
     <string name="prefscreen_create_key_title">Luo tili</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Vahvistettu</string>
     <string name="api_key_state_invalid">Virheellinen</string>
     <string name="api_key_state_pending_verification">Odottaa vahvistusta</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Vastuuvapauslauseke</string>
     <string name="prefscreen_disclaimer_summary">Sovelluksen tarjoamat tiedot tarjotaan ainoastaan yleiseksi tiedoksi</string>
     <string name="copyright_title">Tekijänoikeus</string>

@@ -17,6 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">Cilësimet</string>
+    <string name="prefscreen_category_about_title">Rreth nesh</string>
+    <string name="prefscreen_api_key_title">Çelësi API</string>
+    <string name="prefscreen_api_key_summary">Çelësi juaj privat API për hyrë në të dhënat e motit të %1$s</string>
+    <string name="prefscreen_create_key_title">Krijo llogari</string>
+    <string name="prefscreen_create_key_summary">Krijo një llogari dhe gjenero çelësin tuaj API</string>
+    <string name="api_key_not_set_message">You duhet të vendosni një çelës privat API për të përdorur %1$s</string>
+    <string name="api_key_changed_verification_warning">Çelësi juaj API do të verifikohet në përditësimin tjetër të motit</string>
+    <string name="api_key_state_verified">E verifikuar</string>
+    <string name="api_key_state_invalid">E pasaktë</string>
+    <string name="api_key_state_pending_verification">Verifikim në pritje</string>
+    <string name="prefscreen_disclaimer_title">Mohim</string>
+    <string name="prefscreen_disclaimer_summary">Informacioni i dhënë nga ky aplikacion është vetëm për informacion të përgjithshëm</string>
+    <string name="copyright_title">Të drejtat e autorit</string>
+    <string name="copyright_summary">OpenWeatherMap është një markë e regjistruar e OpenWeatherMap Inc, si në Shtetet e Bashkuara ashtu edhe ndërkombëtarisht</string>
 </resources>

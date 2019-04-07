@@ -17,6 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">Beállítások</string>
+    <string name="prefscreen_category_about_title">Névjegy</string>
+    <string name="prefscreen_api_key_title">API-kulcs</string>
+    <string name="prefscreen_api_key_summary">Az Ön saját API-kulcsa az %1$s időjárásadatok eléréséhez</string>
+    <string name="prefscreen_create_key_title">Fiók létrehozása</string>
+    <string name="prefscreen_create_key_summary">Fiók létrehozása és API-kulcs generálása</string>
+    <string name="api_key_not_set_message">%1$s használatához be kell állítania a privát API-kulcsot</string>
+    <string name="api_key_changed_verification_warning">Az Ön API-kulcsa a következő időjárásfrissítéskor lesz megerősítve</string>
+    <string name="api_key_state_verified">Megerősítve</string>
+    <string name="api_key_state_invalid">Érvénytelen</string>
+    <string name="api_key_state_pending_verification">Folyamatban lévő megerősítés</string>
+    <string name="prefscreen_disclaimer_title">Felelősségkizárás</string>
+    <string name="prefscreen_disclaimer_summary">Az alkalmazás által nyújtott információk csak általános tájékoztatási célokra szolgálnak</string>
+    <string name="copyright_title">Szerzői jog</string>
+    <string name="copyright_summary">Az \'OpenWeatherMap\' az OpenWeatherMap Inc. által bejegyzett védjegy oltalma alatt áll az Egyesült Államokban és nemzetközileg is</string>
 </resources>

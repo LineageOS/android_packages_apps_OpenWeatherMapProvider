@@ -19,6 +19,4 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Cunfiguratziones</string>
     <string name="prefscreen_category_about_title">Informatziones</string>
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
 </resources>

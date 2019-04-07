@@ -19,14 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Inställningar</string>
     <string name="prefscreen_category_about_title">Om</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API-nyckel</string>
     <string name="prefscreen_create_key_title">Registrera ett konto</string>
     <string name="prefscreen_create_key_summary">Registrera ett konto och skapa en API-nyckel</string>
     <string name="api_key_state_verified">Verifierad</string>
     <string name="api_key_state_invalid">Ogiltig</string>
     <string name="api_key_state_pending_verification">Inväntar bekräftelse</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Ansvarsfriskrivning</string>
     <string name="copyright_title">Upphovsrätt</string>
 </resources>

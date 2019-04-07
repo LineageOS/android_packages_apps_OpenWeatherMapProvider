@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">設定</string>
     <string name="prefscreen_category_about_title">このアプリについて</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API キー</string>
     <string name="prefscreen_api_key_summary">%1$sの気象データにアクセスするための API キー</string>
     <string name="prefscreen_create_key_title">アカウントの作成</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">認証済</string>
     <string name="api_key_state_invalid">無効</string>
     <string name="api_key_state_pending_verification">認証を保留中</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">免責事項</string>
     <string name="prefscreen_disclaimer_summary">このアプリケーションによって提供される情報は一般的な情報としてのみ提供されています。</string>
     <string name="copyright_title">著作権情報</string>

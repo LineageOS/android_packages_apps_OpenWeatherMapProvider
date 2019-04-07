@@ -17,6 +17,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">Seaded</string>
+    <string name="prefscreen_category_about_title">Teave</string>
+    <string name="prefscreen_api_key_title">API võti</string>
+    <string name="prefscreen_api_key_summary">Sinu privaatne API võti, et pääseda juurde %1$s ilmateenuse andmetele</string>
+    <string name="prefscreen_create_key_title">Loo konto</string>
+    <string name="prefscreen_create_key_summary">Registreeru ja loo oma API võti</string>
+    <string name="api_key_not_set_message">Sa pead määrama privaatse API võtme, et kasutada %1$s</string>
+    <string name="api_key_changed_verification_warning">API võtit kontrollitakse järgmise ilmateenuse uuendamise ajal</string>
+    <string name="api_key_state_verified">Kinnitatud</string>
+    <string name="api_key_state_invalid">Kehtetu</string>
+    <string name="api_key_state_pending_verification">Kinnitus ootel</string>
+    <string name="prefscreen_disclaimer_title">Õigused ja riskid</string>
+    <string name="copyright_title">Autoriõigus</string>
+    <string name="copyright_summary">OpenWeatherMap on OpenWeatherMap Inc. nii Ameerika Ühendriikides kui ka rahvusvaheliselt registreeritud kaubamärk</string>
 </resources>

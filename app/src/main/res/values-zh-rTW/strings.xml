@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">設定</string>
     <string name="prefscreen_category_about_title">相關資訊</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">API 金鑰</string>
     <string name="prefscreen_api_key_summary">您的私有 API 金鑰存取 %1$s 的天氣資料</string>
     <string name="prefscreen_create_key_title">建立帳戶</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">已認證</string>
     <string name="api_key_state_invalid">無效</string>
     <string name="api_key_state_pending_verification">待驗證</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">免責聲明</string>
     <string name="prefscreen_disclaimer_summary">本申請所提供的資料僅供一般資料之用</string>
     <string name="copyright_title">版權所有</string>

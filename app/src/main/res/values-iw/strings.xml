@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">הגדרות</string>
     <string name="prefscreen_category_about_title">אודות</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">מפתח API</string>
     <string name="prefscreen_api_key_summary">מפתח ה־API הפרטי שלך לגישה לנתוני מזג האוויר של %1$s</string>
     <string name="prefscreen_create_key_title">צור חשבון</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">אומת</string>
     <string name="api_key_state_invalid">לא תקף</string>
     <string name="api_key_state_pending_verification">ממתין לאימות</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">כתב ויתור</string>
     <string name="prefscreen_disclaimer_summary">המידע שנמסר על ידי יישום זה נמסר למטרות איסוף מידע כללי בלבד</string>
     <string name="copyright_title">זכויות יוצרים</string>

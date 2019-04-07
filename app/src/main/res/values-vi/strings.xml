@@ -19,7 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="prefscreen_category_authentication_title">Cài đặt</string>
     <string name="prefscreen_category_about_title">Về</string>
-    <!-- Authentication strings -->
     <string name="prefscreen_api_key_title">Khóa API</string>
     <string name="prefscreen_api_key_summary">Khóa API cá nhân của bạn để truy cập dữ liệu thời tiết %1$s</string>
     <string name="prefscreen_create_key_title">Tạo tài khoản</string>
@@ -29,7 +28,6 @@
     <string name="api_key_state_verified">Đã xác minh</string>
     <string name="api_key_state_invalid">Không hợp lệ</string>
     <string name="api_key_state_pending_verification">Đang chờ xác thực</string>
-    <!-- Copyright and disclaimers -->
     <string name="prefscreen_disclaimer_title">Miễn trừ trách nhiệm</string>
     <string name="prefscreen_disclaimer_summary">Thông tin được cung cấp bởi ứng dụng này chỉ được cung cấp cho mục đích thông tin tổng quát</string>
     <string name="copyright_title">Bản quyền</string>

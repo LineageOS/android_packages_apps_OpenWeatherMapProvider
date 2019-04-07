@@ -17,6 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">ಅಳವಡಿಕೆಗಳು</string>
+    <string name="prefscreen_category_about_title">ಬಗ್ಗೆ</string>
+    <string name="prefscreen_api_key_title">API ಕೀಲಿ</string>
+    <string name="prefscreen_api_key_summary">%1$s ಹವಾಮಾನ ದತ್ತಾಂಶವನ್ನು ಎಟುಕಲು ನಿಮ್ಮ ಗುಪ್ತ API ಕೀಲಿ</string>
+    <string name="prefscreen_create_key_title">ಖಾತೆ ರಚಿಸು</string>
+    <string name="prefscreen_create_key_summary">ಖಾತೆಯನ್ನು ರಚಿಸಿ ಮತ್ತು ನಿಮ್ಮ API ಕೀಲಿಯನ್ನು ಉತ್ಪಾದಿಸು</string>
+    <string name="api_key_not_set_message">ನೀವು %1$s ಬಳಸಲು ಒಂದು ಗುಪ್ತ API ಕೀಲಿಯನ್ನು ಸ್ಥಾಪಿಸಬೇಕು</string>
+    <string name="api_key_changed_verification_warning">ಮುಂದಿನ ಹವಾಮಾನ ನವೀಕರಣದಲ್ಲಿ ನಿಮ್ಮ API ಕೀಲಿಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುವುದು</string>
+    <string name="api_key_state_verified">ಪರಿಶೀಲಿಸಿದೆ</string>
+    <string name="api_key_state_invalid">ಅಮಾನ್ಯ</string>
+    <string name="api_key_state_pending_verification">ಪರಿಶೀಲನೆ ಬಾಕಿಯಿದೆ</string>
+    <string name="prefscreen_disclaimer_title">ಹಕ್ಕುತ್ಯಾಗ</string>
+    <string name="prefscreen_disclaimer_summary">ಈ ಅಪ್ ಒದಗಿಸಿದ ಮಾಹಿತಿಯು ಸಾಮಾನ್ಯ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ</string>
+    <string name="copyright_title">ಕೃತಿಸ್ವಾಮ್ಯ</string>
+    <string name="copyright_summary">OpenWeatherMap ಎಂಬುದು ಅಮೇರಿಕಾ ಮತ್ತು ಅಂತರರಾಷ್ಟ್ರೀಯ ಮಟ್ಟದಲ್ಲಿ OpenWeatherMap Incನ ನೋಂದಾಯಿತ ವ್ಯಾಪಾರ ಮುದ್ರೆಯಾಗಿದೆ</string>
 </resources>

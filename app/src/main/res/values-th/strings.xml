@@ -17,6 +17,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="api_key_state_verified">ยืนยันแล้ว</string>
+    <string name="api_key_state_invalid">ไม่ถูกต้อง</string>
+    <string name="api_key_state_pending_verification">รอการตรวจสอบ</string>
+    <string name="copyright_title">ลิขสิทธิ์</string>
 </resources>

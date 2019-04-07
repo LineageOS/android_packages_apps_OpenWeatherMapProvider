@@ -17,6 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">الإعدادات</string>
+    <string name="prefscreen_category_about_title">حول</string>
+    <string name="prefscreen_api_key_title">مفتاح API</string>
+    <string name="prefscreen_api_key_summary">مفتاح API الخاص بك للوصول إلى%1$s بيانات الطقس</string>
+    <string name="prefscreen_create_key_title">إنشاء حساب</string>
+    <string name="prefscreen_create_key_summary">إنشاء حساب جديد وإنشاء مفتاح API الخاص بك</string>
+    <string name="api_key_not_set_message">يجب تعيين مفتاح API لاستخدام %1$s</string>
+    <string name="api_key_changed_verification_warning">سيتم التحقق من مفتاح API في التحديث التالي من تحديثات الطقس</string>
+    <string name="api_key_state_verified">تم التحقق</string>
+    <string name="api_key_state_invalid">غير صالح</string>
+    <string name="api_key_state_pending_verification">في انتظار التحقق</string>
+    <string name="prefscreen_disclaimer_title">إخلاء المسؤولية</string>
+    <string name="prefscreen_disclaimer_summary">يتم توفير المعلومات المقدمة من قبل هذا التطبيق لأغراض المعلومات العامة فقط</string>
+    <string name="copyright_title">حقوق النشر</string>
+    <string name="copyright_summary">OpenWeatherMap هي علامة تجارية مسجلة لشركة OpenWeatherMap، في الولايات المتحدة ودوليا على حد سواء</string>
 </resources>

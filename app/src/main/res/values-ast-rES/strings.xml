@@ -17,6 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Authentication strings -->
-    <!-- Copyright and disclaimers -->
+    <string name="prefscreen_category_authentication_title">Axustes</string>
+    <string name="prefscreen_category_about_title">Tocante a</string>
+    <string name="prefscreen_api_key_title">Clave API</string>
+    <string name="prefscreen_api_key_summary">La to clave privada API p\'acceder a los datos meteorolóxicos %1$s</string>
+    <string name="prefscreen_create_key_title">Creación de cuenta</string>
+    <string name="prefscreen_create_key_summary">Crea una cuenta y xenera una clave d\'API</string>
+    <string name="api_key_not_set_message">Has afitar una clave d\'API pa usar %1$s</string>
+    <string name="api_key_changed_verification_warning">La to llave API verificaráse nel siguiente anovamientu meteorolóxicu</string>
+    <string name="api_key_state_verified">Verificóse</string>
+    <string name="api_key_state_invalid">Nun val</string>
+    <string name="api_key_state_pending_verification">Verificación pendiente</string>
+    <string name="prefscreen_disclaimer_title">Cláusula de non responsabilidá</string>
+    <string name="prefscreen_disclaimer_summary">La información apurrida por esta aplicación apúrrese namái a efeutos informativos xenerales</string>
+    <string name="copyright_title">Copyright</string>
+    <string name="copyright_summary">OpenWeatherMap ye una marca rexistrada d\'OpenWeatherMap Inc, n\'Estaos Xuníos ya internacionalmente</string>
 </resources>
