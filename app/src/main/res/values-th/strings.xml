@@ -17,8 +17,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="prefscreen_category_authentication_title">การตั้งค่า</string>
+    <string name="prefscreen_category_about_title">เกี่ยวกับ</string>
+    <string name="prefscreen_api_key_title">คีย์ API</string>
+    <string name="prefscreen_api_key_summary">คีย์ API ของคุณเพื่อเข้าถึงข้อมูลสภาพอากาศ %1$s</string>
+    <string name="prefscreen_create_key_title">สร้างบัญชี</string>
+    <string name="prefscreen_create_key_summary">สร้างบัญชีและสร้างคีย์ API ของคุณ</string>
+    <string name="api_key_not_set_message">คุณต้องตั้งค่าคีย์ API เพื่อใช้ %1$s</string>
+    <string name="api_key_changed_verification_warning">คีย์ API ของคุณจะถูกตรวจสอบในอัพเดตอากาศถัดไป</string>
     <string name="api_key_state_verified">ยืนยันแล้ว</string>
     <string name="api_key_state_invalid">ไม่ถูกต้อง</string>
     <string name="api_key_state_pending_verification">รอการตรวจสอบ</string>
+    <string name="prefscreen_disclaimer_title">ข้อสงวนสิทธิ์</string>
+    <string name="prefscreen_disclaimer_summary">ข้อมูลในโปรแกรมนี้มีให้ใช้เป็นข้อมูลทั่วไปเท่านั้น</string>
     <string name="copyright_title">ลิขสิทธิ์</string>
+    <string name="copyright_summary">OpenWeatherMap เป็นเครื่องหมายการค้าจดทะเบียนของ OpenWeatherMap Inc ทั้ง ในไทย และต่างประเทศ</string>
 </resources>
