@@ -29,6 +29,7 @@
     <string name="api_key_state_invalid">Kehtetu</string>
     <string name="api_key_state_pending_verification">Kinnitus ootel</string>
     <string name="prefscreen_disclaimer_title">Õigused ja riskid</string>
+    <string name="prefscreen_disclaimer_summary">Teave, mida see rakendus annab on mõeldud üldise informatsioonina</string>
     <string name="copyright_title">Autoriõigus</string>
     <string name="copyright_summary">OpenWeatherMap on OpenWeatherMap Inc. nii Ameerika Ühendriikides kui ka rahvusvaheliselt registreeritud kaubamärk</string>
 </resources>
