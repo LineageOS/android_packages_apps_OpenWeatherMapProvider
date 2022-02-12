@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The CyanogenMod Project
+     Copyright (C) 2016 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="prefscreen_category_authentication_title">Roghainnean</string>
+    <string name="prefscreen_category_about_title">Mu dhèidhinn</string>
+    <string name="prefscreen_api_key_title">Iuchair API</string>
+    <string name="prefscreen_api_key_summary">An iuchair API phrìobhaideach agad airson dàta aimsire %1$s inntrigeadh</string>
+    <string name="prefscreen_create_key_title">Cruthaich cunntas</string>
+    <string name="prefscreen_create_key_summary">Cruthaich cunntas is gin an iuchair API agad</string>
+    <string name="api_key_not_set_message">Feumaidh tu iuchair API phrìobhaideach a shuidheachadh airson %1$s a chleachdadh</string>
+    <string name="api_key_changed_verification_warning">Thèid an iuchair API a dhearbhadh an ath-thuras a thèid an aimsir ùrachadh</string>
+    <string name="api_key_state_verified">Air a dhearbhadh</string>
+    <string name="api_key_state_invalid">Mì-dhligheach</string>
+    <string name="api_key_state_pending_verification">Ri dhearbhadh</string>
+    <string name="prefscreen_disclaimer_title">Aithris-àichidh</string>
+    <string name="prefscreen_disclaimer_summary">Tha am fiosrachadh a sholaireas an aplacaid seo a chùm fiosrachaidh choitchinn a-mhàin</string>
+    <string name="copyright_title">Còir-lethbhreac</string>
+    <string name="copyright_summary">’S e comharra-malairt clàraichte aig OpenWeatherMap Inc a th’ ann an OpenWeatherMap, an dà chuid sna Stàitean Aonaichte is gu h-eadar-nàiseanta</string>
+</resources>

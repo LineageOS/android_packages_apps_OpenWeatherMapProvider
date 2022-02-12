@@ -16,19 +16,19 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="prefscreen_category_authentication_title">Configurações</string>
+    <string name="prefscreen_category_authentication_title">Axustes</string>
     <string name="prefscreen_category_about_title">Sobre</string>
     <string name="prefscreen_api_key_title">Chave da API</string>
-    <string name="prefscreen_api_key_summary">A sua chave privada da API para obter os dados meteorológicos de %1$s</string>
-    <string name="prefscreen_create_key_title">Criar conta</string>
-    <string name="prefscreen_create_key_summary">Criar uma conta e gerar a sua chave da API</string>
-    <string name="api_key_not_set_message">Você deve definir uma chave privada da API para usar o serviço %1$s</string>
-    <string name="api_key_changed_verification_warning">A sua chave da API será verificada na próxima atualização do tempo</string>
+    <string name="prefscreen_api_key_summary">A túa chave privada da API para acceder aos datos meteorolóxicos de %1$s</string>
+    <string name="prefscreen_create_key_title">Crear conta</string>
+    <string name="prefscreen_create_key_summary">Crear unha conta e xerar a túa chave API</string>
+    <string name="api_key_not_set_message">Tes que definir unha chave API privada para empregar %1$s</string>
+    <string name="api_key_changed_verification_warning">A túa chave API verificarase na vindeira actualización meteorolóxica</string>
     <string name="api_key_state_verified">Verificada</string>
     <string name="api_key_state_invalid">Inválida</string>
-    <string name="api_key_state_pending_verification">Verificação pendente</string>
+    <string name="api_key_state_pending_verification">Verificación pendente</string>
     <string name="prefscreen_disclaimer_title">Aviso legal</string>
-    <string name="prefscreen_disclaimer_summary">As informações disponibilizadas por este aplicativo são apenas para fins informativos gerais</string>
-    <string name="copyright_title">Direitos autorais</string>
-    <string name="copyright_summary">OpenWeatherMap é uma marca registada da OpenWeatherMap Inc, tanto nos Estados Unidos como internacionalmente</string>
+    <string name="prefscreen_disclaimer_summary">A información fornecida por este aplicación é só para fins de información xeral</string>
+    <string name="copyright_title">Copyright</string>
+    <string name="copyright_summary">OpenWeatherMap é unha marca rexistrada de OpenWeatherMap Inc, nos Estados Unidos e internacionalmente</string>
 </resources>
